@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Vehicle Registration Form</title>
+  </head>
+  <body>
+    <div class="content-wrapper">
+    <section class="content-header">
+      <h1>
+          General Form
+          <small></small>
+      </h1>
+      <ol class="breadcrumb">
+          <li><a href=""><i class="fa fa-dashboard"></i> Home</a></li>
+          <li class="active">Deals</li>
+      </ol>
+  </section>
+    <form action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="container">
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" name="is_active" type="checkbox" id="gridCheck" required>
+            <label class="form-check-label" for="gridCheck">
+              Is Active
+            </label>
+          </div>
+        </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputvehical">Vehical No</label>
+          <input type="text" name="vehicle_no" class="form-control" id="inputvehical" placeholder="Vehical no" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputwheeler">Wheeler</label>
+          <input type="text" name="wheeler" class="form-control" id="inputwheeler" placeholder="wheeler" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">RFID Tag</label>
+        <input type="text" name="rfid_tag" class="form-control" id="inputAddress" placeholder="RFID" required> 
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Transporter</label>
+        <input type="text" name="transporter" class="form-control" id="transporter" placeholder="Transporter" required>
+      </div>
+        <div class="form-group">
+          <label for="inputAddress2">RC No</label>
+          <input type="text" name="rc_no" class="form-control" id="rcno" placeholder="rc no" required>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Vehical Temparory No</label>
+          <input type="text" name="vehicle_temp_no" class="form-control" id="rcno" placeholder="rc no" required>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Chasis No</label>
+          <input type="text" name="chasis_no" class="form-control" id="chasis" placeholder="chasis no" required>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Permit Type</label>
+          <input type="text" name="permit_type" class="form-control" id="permittype" placeholder="permit type" required>
+        </div>
+      <div class="form-group">
+        <label for="inputAddress">Road Tax</label>
+        <input type="text" name="road_tax" class="form-control" id="inputAddress" placeholder="road tax" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Road Tax Expiry</label>
+        <input type="date" name="road_tax_expiry" class="form-control" id="inputAddress2" placeholder="date" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Fitness</label>
+        <input type="text" name="fitness" class="form-control" id="inputAddress" placeholder="Fitness" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Fitness Expiry</label>
+        <input type="date" name="fitness_expiry" class="form-control" id="inputAddress" placeholder="date" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Insurance</label>
+        <input type="text" name="insurance" class="form-control" id="inputAddress2" placeholder="insurance" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Insurance Expiry</label>
+        <input type="date" name="insurance_expiry" class="form-control" id="inputAddress2" placeholder="date" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Pollution</label>
+        <input type="text" name="pollution" class="form-control" id="inputAddress2" placeholder="pollution" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Pollution Expiry</label>
+        <input type="date" name="pollution_expiry" class="form-control" id="inputAddress2" placeholder="date" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">permit</label>
+        <input type="text" name="permit" class="form-control" id="inputAddress2" placeholder="permit" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Permit Expiry</label>
+        <input type="date" name="permit_expiry" class="form-control" id="inputAddress2" placeholder="date" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Status</label>
+        <input type="text" name="status" class="form-control" id="inputAddress2" placeholder="permit" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Status Change Date</label>
+        <input type="date" name="status_change_date" class="form-control" id="inputAddress2" placeholder="date" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Vehical Owner</label>
+        <input type="text" name="vehicle_onwer" class="form-control" id="inputAddress2" placeholder="owner" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Owner Contact</label>
+        <input type="text" name="onwer_contact" class="form-control" id="inputAddress2" placeholder="Contact" required>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Owner Address</label>
+        <input type="text" name="onwer_address" class="form-control" id="inputAddress2" placeholder="Address" required>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input name="onn_vehicle" class="form-check-input" type="checkbox" id="gridCheck" required>
+          <label class="form-check-label" for="gridCheck">
+            Own Vehical
+          </label>
+        </div>
+      </div>
+      <input type="submit" class="btn btn-primary">
+    </div>
+    </form>
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
