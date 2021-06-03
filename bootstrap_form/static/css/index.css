@@ -1,0 +1,102 @@
+.edit{
+    background-color: #1E7DCD; 
+    color: white; 
+    height: 30px; 
+    display: flex; 
+    align-items: center;
+}
+
+.times{
+    cursor: pointer;
+}
+
+.button{
+    border-radius:5px ;
+}
+
+hr{
+    margin: 0;
+}
+
+.details{
+    background-color: #7380C4; 
+    color: white; 
+    height: 30px; 
+    display: flex; 
+    align-items: center;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+    padding-left: 8px;
+    padding-right: 6px;
+}
+
+.link:hover{
+    color: aqua;
+}
+
+.bord{
+    border-left: 1px groove white;
+    border-right: 1px groove white;
+}
+
+.head{
+    color: #C2AB84;
+}
+
+.title{
+    padding-right: 0;
+    text-align: end;
+}
+
+.form-control{
+    width: 185px;
+    border-radius: 3px;
+    height: 25px; 
+    border-color: gainsboro;
+   
+}
+
+.form-select{
+    width: 185px; 
+    height: 30px; 
+    padding-top: 0;
+}
+
+.sel{
+    width: 78.5%;
+}
+
+.calender{
+    cursor: pointer;
+}
+
+label{
+    color: rgb(92, 92, 167);
+}
+
+
+@media screen and (max-width:800px){
+    body{
+        padding-top: 10px;
+        font-size: 12px;
+    }
+    .form-control{
+        width: 175px;
+        border-radius: 3px;
+        height: 20px; 
+        border-color: gainsboro;
+       
+    }
+    .form-select{
+        width: 175px; 
+        height: 20px; 
+        padding-top: 0;
+    }
+    
+}
+
+
+

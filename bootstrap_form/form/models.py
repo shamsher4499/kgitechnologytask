@@ -1,7 +1,8 @@
 from django.db import models
-from django.db.models.fields import CharField
 
 # Create your models here.
+
+
 
 class VehicleGeneralForm(models.Model):
     is_active = models.BooleanField(default=True, null=True, blank=True)
@@ -31,4 +32,4 @@ class VehicleGeneralForm(models.Model):
     onn_vehicle = models.BooleanField(default=True, null=True, blank=True)
 
     def __str__(self):
-        return self.vehicle_onwer
+        return str(self.vehicle_onwer)

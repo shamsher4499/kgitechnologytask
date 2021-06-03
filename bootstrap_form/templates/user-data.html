@@ -1,0 +1,339 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Register Vehicle</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row mt-2 edit">
+            <div class="col-11">
+                Edit Vehicle
+            </div>
+            <div class="col-1 text-end times">
+                <i class="fa fa-times"></i>
+            </div>
+        </div>
+   <div class="row">
+        <div class="col-12 my-2">
+        <button class="button"> <img src="{% static 'images/update.JPG' %}" alt="Update"  width="18px" > Update </button>
+        <button class="button"> <img src="{% static 'images/save.JPG' %}" alt="Save"  width="18px"> </button>
+        <button class="button"> <img src="{% static 'images/delete.JPG' %}" alt="Delete"  width="18px"> Delete </button>
+    </div>
+    </div>
+    <hr>
+  </div>
+  <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+     <div class="container">
+    <div class="row mt-2 details">
+      <div class="col-12 text-end">
+           <a href="" class="link"> General </a>
+           <a href="" class="link bord"> Statutory Details </a>
+           <a href="" class="link"> Other Details </a>
+          </div>
+    </div>
+    <h6 class="mt-2 mb-1 head" > General </h6>
+    <hr>
+    <div class="row">
+      <div class="col-md-6 pt-3">
+        <div class="row">
+        <div class="col-4 title">
+                <label>  Is Active </label>
+        </div>
+        <div class="col-2">
+          <input class="form-check-input mt-1" value="{{register.is_active}}" type="checkbox">
+        </div>
+      </div>
+      </div>
+      <div class="col-md-6 pt-3">
+        <div class="row">
+        <div class="col-4 title">
+                <label> <sup class="text-danger"> &#9733;</sup>  Vehicle No </label>
+        </div>
+        <div class="col-2">
+          <input type="text" name="{{register.vehicle_no}}" class="form-control">
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 pt-3">
+        <div class="row">
+        <div class="col-4 title">
+                <label> <sup class="text-danger"> &#9733;</sup>  Wheeler </label>
+        </div>
+        <div class="col-2">
+          <input type="text" name="wheeler" class="form-control">
+        </div>
+      </div>
+      </div>
+      <div class="col-md-6 pt-3">
+        <div class="row">
+        <div class="col-4 title">
+                <label> <sup class="text-danger"> &#9733;</sup> RFID Tag </label>
+        </div>
+        <div class="col-2">
+          <input type="text" name="rfid_tag" class="form-control">
+        </div>
+      </div>
+      </div>
+    </div>  
+    <div class="row pt-3">
+      <div class="col-md-2 col-4 text-end" style="padding-top: 0;">
+                <label> <sup class="text-danger"> &#9733;</sup> Transporter </label>
+        </div>
+        <div class="col-md-10 col-8">
+          <input type="text" name="transporter" class="form-control">
+        </div>
+      </div>  
+   <div class="row">
+    <div class="col-md-6 pt-3">
+      <div class="row">
+      <div class="col-4 title">
+              <label> <sup class="text-danger"> &#9733;</sup> RC No</label>
+      </div>
+      <div class="col-2">
+        <input type="text" name="rc_no" class="form-control">
+      </div>
+    </div>
+    </div>
+    <div class="col-md-6 pt-3">
+      <div class="row">
+      <div class="col-4 title">
+              <label> Vehicle Temp No </label>
+      </div>
+      <div class="col-2">
+        <input type="text" name="vehicle_temp_no" class="form-control">
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 pt-3">
+      <div class="row">
+      <div class="col-4 title">
+              <label>  Chasis No </label>
+      </div>
+      <div class="col-2 res">
+        <input type="text" name="chasis_no" class="form-control">
+      </div>
+    </div>
+    </div>
+    <div class="col-md-6 pt-3">
+      <div class="row">
+      <div class="col-4 title">
+              <label> Permit Type </label>
+      </div>
+      <div class="col-2">
+        <input type="text" name="permit_type" class="form-control">
+      </div>
+    </div>
+    </div>
+  </div>
+  
+  <h6 class="mt-2 mb-1 head" > Statutory Details </h6>
+    <hr>
+    <div class="row">
+      <div class="col-md-6 pt-3">
+        <div class="row">
+        <div class="col-4 title">
+                <label> Road Tax </label>
+        </div>
+        <div class="col-2">
+          <input type="text" name="road_tax" class="form-control">
+        </div>
+      </div>
+      </div>
+      <div class="col-md-6 pt-3">
+        <div class="row">
+        <div class="col-4 title">
+                <label>Road Tax Expiry </label>
+        </div>
+        <div class="col-2 d-flex">
+          <input type="text" name="road_tax_expiry" class="form-control" placeholder="dd/mm/yy">
+          <img class="calender" src="{% static 'images/calender.JPG' %}" alt="calender" width="20px" style="padding-left: 2px;">
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 pt-3">
+        <div class="row">
+        <div class="col-4 title">
+                <label>Fitness </label>
+        </div>
+        <div class="col-2">
+          <input type="text" name="fitness" class="form-control">
+        </div>
+      </div>
+      </div>
+      <div class="col-md-6 pt-3">
+        <div class="row">
+        <div class="col-4 title">
+                <label>Fitness Expiry </label>
+        </div>
+        <div class="col-2 d-flex">
+          <input type="text" name="fitness_expiry" class="form-control">
+          <img class="calender" src="{% static 'images/calender.JPG' %}" alt="calender" width="20px" style="padding-left: 2px;">
+        </div>
+      </div>
+      </div>
+    </div>
+   <div class="row">
+    <div class="col-md-6 pt-3">
+      <div class="row">
+      <div class="col-4 title">
+              <label> Insurance </label>
+      </div>
+      <div class="col-2">
+        <input type="text" name="insurance" class="form-control">
+      </div>
+    </div>
+    </div>
+    <div class="col-md-6 pt-3">
+      <div class="row">
+      <div class="col-4 title">
+              <label>Insurance Expiry</label>
+      </div>
+      <div class="col-2 d-flex">
+        <input type="text" name="insurance_expiry" class="form-control">
+        <img class="calender" src="{% static 'images/calender.JPG' %}" alt="calender" width="20px" style="padding-left: 2px;">
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 pt-3">
+      <div class="row">
+      <div class="col-4 title">
+              <label> Pollution </label>
+      </div>
+      <div class="col-2">
+        <input type="text" name="pollution" class="form-control">
+      </div>
+    </div>
+    </div>
+    <div class="col-md-6 pt-3">
+      <div class="row">
+      <div class="col-4 title">
+              <label> Pollution Expiry </label>
+      </div>
+      <div class="col-2 d-flex">
+        <input type="text" name="pollution_expiry" class="form-control">
+        <img class="calender" src="{% static 'images/calender.JPG' %}" alt="calender" width="20px" style="padding-left: 2px;">
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 pt-3">
+      <div class="row">
+      <div class="col-4 title">
+              <label> Permit </label>
+      </div>
+      <div class="col-2">
+        <input type="text" name="permit" class="form-control">
+      </div>
+    </div>
+    </div>
+    <div class="col-md-6 pt-3">
+      <div class="row">
+      <div class="col-4 title">
+              <label> Permit Expiry </label>
+      </div>
+      <div class="col-2 d-flex">
+        <input type="text" name="permit_expiry" class="form-control">
+        <img class="calender" src="{% static 'images/calender.JPG' %}" alt="calender" width="20px" style="padding-left: 2px;">
+      </div>
+    </div>
+    </div>
+  </div>
+  <h6 class="mt-2 mb-1 head" > Other Details </h6>
+    <hr>
+    <div class="row">
+      <div class="col-md-6 pt-3">
+        <div class="row">
+        <div class="col-4 title">
+                <label> Status </label>
+        </div>
+        <div class="col-2">
+          <input type="text" name="status" class="form-control">
+        </div>
+      </div>
+      </div>
+      <div class="col-md-6 pt-3">
+        <div class="row">
+        <div class="col-4 title">
+                <label> Status Change Date </label>
+        </div>
+        <div class="col-2 d-flex">
+          <input type="text" name="status_change_date" class="form-control">
+          <img class="calender" src="{% static 'images/calender.JPG' %}" alt="calender" width="20px" style="padding-left: 2px;">
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 pt-3">
+        <div class="row">
+        <div class="col-4 title">
+                <label> Vehicle Owner </label>
+        </div>
+        <div class="col-2">
+          <input type="text" name="vehicle_onwer" class="form-control">
+        </div>
+      </div>
+      </div>
+      <div class="col-md-6 pt-3">
+        <div class="row">
+        <div class="col-4 title">
+                <label> Owner Contact </label>
+        </div>
+        <div class="col-2">
+          <input type="text" name="onwer_contact" class="form-control">
+        </div>
+      </div>
+      </div>
+    </div>
+   <div class="row mb-3">
+    <div class="col-md-6 pt-3">
+      <div class="row">
+      <div class="col-4 title">
+              <label> Owner Address </label>
+      </div>
+      <div class="col-2">
+        <input type="text" name="onwer_address" class="form-control">
+      </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-6 pt-3">
+      <div class="row">
+      <div class="col-4 title">
+              <label> Owner Vehicle?</label>
+      </div>
+      <div class="col-2">
+        <input name="onn_vehicle" class="form-check-input mt-1" type="checkbox">
+      </div>
+      </div>
+  </div>
+  <div class="col-md-6 pt-3">
+    <div class="col-2">
+      <input type="submit" class="btn btn-primary">
+    </div>
+</div>
+</form>
+
+    <!--  Popper  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>
